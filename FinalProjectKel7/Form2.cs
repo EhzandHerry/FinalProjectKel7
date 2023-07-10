@@ -120,5 +120,12 @@ namespace FinalProjectKel7
             btnsv.Enabled = true;
             btnc.Enabled = true;
         }
+
+        private void ad_TextChanged(object sender, EventArgs e)
+        {
+            ad.Enabled = true;
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
+        }
     }
 }

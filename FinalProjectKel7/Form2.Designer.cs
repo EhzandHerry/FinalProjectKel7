@@ -103,6 +103,7 @@
             this.ad.Name = "ad";
             this.ad.Size = new System.Drawing.Size(214, 26);
             this.ad.TabIndex = 6;
+            this.ad.TextChanged += new System.EventHandler(this.ad_TextChanged);
             // 
             // nd
             // 
