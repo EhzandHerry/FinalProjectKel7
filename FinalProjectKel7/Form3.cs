@@ -50,5 +50,16 @@ namespace FinalProjectKel7
             btnsave.Enabled = true;
             btnc.Enabled = true;
         }
+
+        private void dataGridView1_CellContentClick()
+        {
+            koneksi.Open();
+            string str = "select id_jurusan, nama_jurusan From dbo.dosen";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+        }
     }
 }
