@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnsave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnc = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -54,6 +54,7 @@
             this.ij.Name = "ij";
             this.ij.Size = new System.Drawing.Size(268, 26);
             this.ij.TabIndex = 1;
+            this.ij.TextChanged += new System.EventHandler(this.ij_TextChanged);
             // 
             // label1
             // 
@@ -92,14 +93,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnc
             // 
-            this.button3.Location = new System.Drawing.Point(556, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 35);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnc.Location = new System.Drawing.Point(556, 344);
+            this.btnc.Name = "btnc";
+            this.btnc.Size = new System.Drawing.Size(94, 35);
+            this.btnc.TabIndex = 6;
+            this.btnc.Text = "Clear";
+            this.btnc.UseVisualStyleBackColor = true;
             // 
             // btnadd
             // 
@@ -137,7 +138,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnc);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.label2);
@@ -161,7 +162,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnc;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;

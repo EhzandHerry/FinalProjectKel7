@@ -43,5 +43,12 @@ namespace FinalProjectKel7
             f1.Show();
             this.Hide();
         }
+
+        private void ij_TextChanged(object sender, EventArgs e)
+        {
+            ij.Enabled = true;
+            btnsave.Enabled = true;
+            btnc.Enabled = true;
+        }
     }
 }
