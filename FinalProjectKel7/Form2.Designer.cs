@@ -109,6 +109,7 @@
             this.nd.Name = "nd";
             this.nd.Size = new System.Drawing.Size(214, 26);
             this.nd.TabIndex = 7;
+            this.nd.TextChanged += new System.EventHandler(this.nd_TextChanged);
             // 
             // btnsv
             // 
