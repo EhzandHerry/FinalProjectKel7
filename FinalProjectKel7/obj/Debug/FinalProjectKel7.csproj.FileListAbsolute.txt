@@ -23,3 +23,4 @@ C:\Users\nerob\source\repos\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalPro
 C:\Users\nerob\source\repos\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.CoreCompileInputs.cache
 C:\Users\nerob\source\repos\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.exe
 C:\Users\nerob\source\repos\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.pdb
+C:\Users\nerob\source\repos\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.Form3.resources

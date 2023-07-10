@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ij = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,12 +48,12 @@
             this.textBox1.Size = new System.Drawing.Size(268, 26);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox2
+            // ij
             // 
-            this.textBox2.Location = new System.Drawing.Point(382, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(268, 26);
-            this.textBox2.TabIndex = 1;
+            this.ij.Location = new System.Drawing.Point(382, 221);
+            this.ij.Name = "ij";
+            this.ij.Size = new System.Drawing.Size(268, 26);
+            this.ij.TabIndex = 1;
             // 
             // label1
             // 
@@ -141,7 +141,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ij);
             this.Controls.Add(this.textBox1);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -155,7 +155,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ij;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
