@@ -9,3 +9,4 @@ D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.Gene
 D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.CoreCompileInputs.cache
 D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.exe
 D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.pdb
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.Mahasiswa.resources
