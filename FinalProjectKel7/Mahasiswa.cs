@@ -98,5 +98,12 @@ namespace FinalProjectKel7
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }
+
+        private void nmhs_TextChanged(object sender, EventArgs e)
+        {
+            nmhs.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }

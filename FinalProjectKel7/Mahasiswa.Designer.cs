@@ -35,7 +35,6 @@
             this.btnView = new System.Windows.Forms.Button();
             this.imhs = new System.Windows.Forms.TextBox();
             this.nmhs = new System.Windows.Forms.TextBox();
-            this.jk = new System.Windows.Forms.TextBox();
             this.am = new System.Windows.Forms.TextBox();
             this.nt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.jk = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,13 +107,7 @@
             this.nmhs.Name = "nmhs";
             this.nmhs.Size = new System.Drawing.Size(100, 20);
             this.nmhs.TabIndex = 6;
-            // 
-            // jk
-            // 
-            this.jk.Location = new System.Drawing.Point(315, 228);
-            this.jk.Name = "jk";
-            this.jk.Size = new System.Drawing.Size(100, 20);
-            this.jk.TabIndex = 7;
+            this.nmhs.TextChanged += new System.EventHandler(this.nmhs_TextChanged);
             // 
             // am
             // 
@@ -174,11 +168,23 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Alamat";
             // 
+            // jk
+            // 
+            this.jk.FormattingEnabled = true;
+            this.jk.Items.AddRange(new object[] {
+            "L",
+            "P"});
+            this.jk.Location = new System.Drawing.Point(315, 227);
+            this.jk.Name = "jk";
+            this.jk.Size = new System.Drawing.Size(121, 21);
+            this.jk.TabIndex = 15;
+            // 
             // Mahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.jk);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -186,7 +192,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nt);
             this.Controls.Add(this.am);
-            this.Controls.Add(this.jk);
             this.Controls.Add(this.nmhs);
             this.Controls.Add(this.imhs);
             this.Controls.Add(this.btnView);
@@ -211,7 +216,6 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.TextBox imhs;
         private System.Windows.Forms.TextBox nmhs;
-        private System.Windows.Forms.TextBox jk;
         private System.Windows.Forms.TextBox am;
         private System.Windows.Forms.TextBox nt;
         private System.Windows.Forms.Label label1;
@@ -219,5 +223,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox jk;
     }
 }
