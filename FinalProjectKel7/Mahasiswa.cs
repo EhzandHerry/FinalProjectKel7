@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalProjectKel7
 {
-    public partial class Form1 : Form
+    public partial class Mahasiswa : Form
     {
-        public Form1()
+        public Mahasiswa()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Mahasiswa mahasiswa = new Mahasiswa();
-            mahasiswa.Show();
-            this.Hide();
         }
     }
 }

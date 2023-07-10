@@ -1,0 +1,11 @@
+D:\PABD\FinalProjectKel7\FinalProjectKel7\bin\Debug\FinalProjectKel7.exe.config
+D:\PABD\FinalProjectKel7\FinalProjectKel7\bin\Debug\FinalProjectKel7.exe
+D:\PABD\FinalProjectKel7\FinalProjectKel7\bin\Debug\FinalProjectKel7.pdb
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.AssemblyReference.cache
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.SuggestedBindingRedirects.cache
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.Form1.resources
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.Properties.Resources.resources
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.GenerateResource.cache
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.csproj.CoreCompileInputs.cache
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.exe
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.pdb
