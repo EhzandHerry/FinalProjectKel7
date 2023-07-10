@@ -178,6 +178,7 @@
             this.jk.Name = "jk";
             this.jk.Size = new System.Drawing.Size(121, 21);
             this.jk.TabIndex = 15;
+            this.jk.SelectedIndexChanged += new System.EventHandler(this.jk_SelectedIndexChanged);
             // 
             // Mahasiswa
             // 

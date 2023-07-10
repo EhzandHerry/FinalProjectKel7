@@ -105,5 +105,12 @@ namespace FinalProjectKel7
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }
+
+        private void jk_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            jk.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }
