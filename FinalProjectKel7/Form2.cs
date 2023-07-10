@@ -68,5 +68,35 @@ namespace FinalProjectKel7
         {
             refreshform();
         }
+
+        private void btnsv_Click(object sender, EventArgs e)
+        {
+            string idDosen = id.Text;
+            string nDosen = nd.Text;
+            string ntDosen = nt.Text;
+            string aDosen = ad.Text;
+
+
+            if (idDosen == "" || nDosen == "" || ntDosen == "" || aDosen == "")
+            {
+                MessageBox.Show("Masukkan Keduanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.prodi (id_dosen, nama_dosen, no_telp, alamat) VALUES (@id_prodi, @nama_prodi)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_dosen", idDosen));
+                cmd.Parameters.Add(new SqlParameter("@nama_dosen", nDosen));
+                cmd.Parameters.Add(new SqlParameter("@no_telp", ntDosen));
+                cmd.Parameters.Add(new SqlParameter("@alamat", aDosen));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
+        }
     }
 }

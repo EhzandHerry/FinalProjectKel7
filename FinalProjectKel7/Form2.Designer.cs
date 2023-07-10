@@ -118,6 +118,7 @@
             this.btnsv.TabIndex = 8;
             this.btnsv.Text = "Save";
             this.btnsv.UseVisualStyleBackColor = true;
+            this.btnsv.Click += new System.EventHandler(this.btnsv_Click);
             // 
             // btnadd
             // 
