@@ -38,6 +38,15 @@ namespace FinalProjectKel7
             btnClear.Enabled = false;
         }
 
-
+        private void dataGridView1_CellContentClick()
+        {
+            koneksi.Open();
+            string str = "select id_mhs, nama_mhs, jk_mhs, nt_mahasiswa, almt_mhs From dbo.mahasiswa";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+        }
     }
 }

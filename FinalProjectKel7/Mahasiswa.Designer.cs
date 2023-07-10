@@ -53,6 +53,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+          
             // 
             // add
             // 
@@ -71,7 +72,6 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -81,7 +81,6 @@
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnView
             // 
@@ -91,7 +90,6 @@
             this.btnView.TabIndex = 4;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.view_Click);
             // 
             // imhs
             // 
@@ -99,7 +97,6 @@
             this.imhs.Name = "imhs";
             this.imhs.Size = new System.Drawing.Size(100, 20);
             this.imhs.TabIndex = 5;
-            this.imhs.TextChanged += new System.EventHandler(this.imhs_TextChanged);
             // 
             // nmhs
             // 
@@ -107,7 +104,6 @@
             this.nmhs.Name = "nmhs";
             this.nmhs.Size = new System.Drawing.Size(100, 20);
             this.nmhs.TabIndex = 6;
-            this.nmhs.TextChanged += new System.EventHandler(this.nmhs_TextChanged);
             // 
             // jk
             // 
@@ -115,7 +111,6 @@
             this.jk.Name = "jk";
             this.jk.Size = new System.Drawing.Size(100, 20);
             this.jk.TabIndex = 7;
-            this.jk.TextChanged += new System.EventHandler(this.jk_TextChanged);
             // 
             // am
             // 
@@ -123,7 +118,6 @@
             this.am.Name = "am";
             this.am.Size = new System.Drawing.Size(100, 20);
             this.am.TabIndex = 8;
-            this.am.TextChanged += new System.EventHandler(this.am_TextChanged);
             // 
             // nt
             // 
@@ -131,7 +125,6 @@
             this.nt.Name = "nt";
             this.nt.Size = new System.Drawing.Size(100, 20);
             this.nt.TabIndex = 9;
-            this.nt.TextChanged += new System.EventHandler(this.nt_TextChanged);
             // 
             // label1
             // 
