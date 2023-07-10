@@ -95,6 +95,7 @@
             this.nt.Name = "nt";
             this.nt.Size = new System.Drawing.Size(214, 26);
             this.nt.TabIndex = 5;
+            this.nt.TextChanged += new System.EventHandler(this.nt_TextChanged);
             // 
             // ad
             // 
