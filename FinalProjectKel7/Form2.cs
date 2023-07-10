@@ -45,7 +45,9 @@ namespace FinalProjectKel7
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            id.Enabled = true;
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,12 +81,12 @@ namespace FinalProjectKel7
 
             if (idDosen == "" || nDosen == "" || ntDosen == "" || aDosen == "")
             {
-                MessageBox.Show("Masukkan Keduanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Masukkan Semuanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.prodi (id_dosen, nama_dosen, no_telp, alamat) VALUES (@id_prodi, @nama_prodi)";
+                string str = "insert into dbo.prodi (id_dosen, nama_dosen, no_telp, alamat) VALUES (@id_dosen, @nama_dosen, @no_telp, @alamat)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_dosen", idDosen));
@@ -97,6 +99,12 @@ namespace FinalProjectKel7
                 dataGridView1_CellContentClick();
                 refreshform();
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1_CellContentClick();
+            btnview.Enabled = false;
         }
     }
 }

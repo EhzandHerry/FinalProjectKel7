@@ -38,10 +38,10 @@
             this.nd = new System.Windows.Forms.TextBox();
             this.btnsv = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnc = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,15 +130,15 @@
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnc
             // 
-            this.button3.Location = new System.Drawing.Point(554, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 35);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnc.Location = new System.Drawing.Point(554, 336);
+            this.btnc.Name = "btnc";
+            this.btnc.Size = new System.Drawing.Size(87, 35);
+            this.btnc.TabIndex = 10;
+            this.btnc.Text = "Clear";
+            this.btnc.UseVisualStyleBackColor = true;
+            this.btnc.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -160,24 +160,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 12;
             // 
-            // button5
+            // btnview
             // 
-            this.button5.Location = new System.Drawing.Point(537, 24);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 35);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "View";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnview.Location = new System.Drawing.Point(537, 24);
+            this.btnview.Name = "btnview";
+            this.btnview.Size = new System.Drawing.Size(87, 35);
+            this.btnview.TabIndex = 13;
+            this.btnview.Text = "View";
+            this.btnview.UseVisualStyleBackColor = true;
+            this.btnview.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 418);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnview);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnc);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnsv);
             this.Controls.Add(this.nd);
@@ -208,9 +209,9 @@
         private System.Windows.Forms.TextBox nd;
         private System.Windows.Forms.Button btnsv;
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnc;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnview;
     }
 }
