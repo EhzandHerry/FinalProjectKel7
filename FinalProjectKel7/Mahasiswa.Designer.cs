@@ -43,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.jk = new System.Windows.Forms.ComboBox();
-            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,22 +182,11 @@
             this.jk.TabIndex = 15;
             this.jk.SelectedIndexChanged += new System.EventHandler(this.jk_SelectedIndexChanged);
             // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(686, 332);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 16;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
             // Mahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Back);
             this.Controls.Add(this.jk);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -239,6 +227,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox jk;
-        private System.Windows.Forms.Button Back;
     }
 }

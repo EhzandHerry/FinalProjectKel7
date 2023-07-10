@@ -13,7 +13,7 @@ namespace FinalProjectKel7
 {
     public partial class Mahasiswa : Form
     {
-        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=DBJadwalAkademik;User ID=sa;Password=Conex999";
+        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=Act6;User ID=sa;Password=Conex999";
         private SqlConnection koneksi;
 
         public Mahasiswa()
@@ -41,7 +41,7 @@ namespace FinalProjectKel7
         private void dataGridView1_CellContentClick()
         {
             koneksi.Open();
-            string str = "select id_mhs, nama_mhs, jenis_kelamin, no_telp, alamat From dbo.mahasiswa";
+            string str = "select id_mhs, nama_mhs, jk_mhs, nt_mahasiswa, almt_mhs From dbo.mahasiswa";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
@@ -70,14 +70,14 @@ namespace FinalProjectKel7
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.mahasiswa (id_mhs, nama_mhs, jenis_kelamin, no_telp, alamat) VALUES (@id_mhs, @nama_mhs, @jenis_kelamin, @no_telp, @alamat)";
+                string str = "insert into dbo.prodi (id_mahasiswa, nama_mahasiswa, jk_mahasiswa, notelp_mahasiswa, alamat_mahasiswa) VALUES (@id_prodi, @nama_prodi)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@id_mhs", iMahasiswa));
-                cmd.Parameters.Add(new SqlParameter("@nama_mhs", nmMahasiswa));
-                cmd.Parameters.Add(new SqlParameter("@jenis_kelamin", jkMahasiswa));
-                cmd.Parameters.Add(new SqlParameter("@no_telp", ntMahasiswa));
-                    cmd.Parameters.Add(new SqlParameter("alamat", almtMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@id_mahasiswa", iMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@nama_mahasiswa", nmMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@jk_mahasiswa", jkMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@notelp_mahasiswa", ntMahasiswa));
+                    cmd.Parameters.Add(new SqlParameter("alamat_mahasiswa", almtMahasiswa));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
@@ -125,13 +125,6 @@ namespace FinalProjectKel7
             am.Enabled = true;
             btnSave.Enabled = true;
             btnClear.Enabled = true;
-        }
-
-        private void Back_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
         }
     }
 }
