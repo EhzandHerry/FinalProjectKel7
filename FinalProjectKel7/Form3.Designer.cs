@@ -36,7 +36,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnc = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnview = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -113,14 +113,15 @@
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnview
             // 
-            this.button5.Location = new System.Drawing.Point(524, 23);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 35);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "View";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnview.Location = new System.Drawing.Point(524, 23);
+            this.btnview.Name = "btnview";
+            this.btnview.Size = new System.Drawing.Size(94, 35);
+            this.btnview.TabIndex = 8;
+            this.btnview.Text = "View";
+            this.btnview.UseVisualStyleBackColor = true;
+            this.btnview.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView1
             // 
@@ -138,7 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 414);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnview);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnc);
             this.Controls.Add(this.button2);
@@ -166,7 +167,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnc;
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnview;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
