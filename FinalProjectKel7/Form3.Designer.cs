@@ -47,6 +47,7 @@
             this.nj.Name = "nj";
             this.nj.Size = new System.Drawing.Size(268, 26);
             this.nj.TabIndex = 0;
+            this.nj.TextChanged += new System.EventHandler(this.nj_TextChanged);
             // 
             // ij
             // 
