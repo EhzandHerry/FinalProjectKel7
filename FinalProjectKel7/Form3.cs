@@ -54,7 +54,7 @@ namespace FinalProjectKel7
         private void dataGridView1_CellContentClick()
         {
             koneksi.Open();
-            string str = "select id_jurusan, nama_jurusan From dbo.dosen";
+            string str = "select id_jurusan, nama_jurusan From dbo.jurusan";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
