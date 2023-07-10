@@ -115,6 +115,7 @@
             this.am.Name = "am";
             this.am.Size = new System.Drawing.Size(100, 20);
             this.am.TabIndex = 8;
+            this.am.TextChanged += new System.EventHandler(this.am_TextChanged);
             // 
             // nt
             // 

@@ -119,5 +119,12 @@ namespace FinalProjectKel7
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }
+
+        private void am_TextChanged(object sender, EventArgs e)
+        {
+            am.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }
