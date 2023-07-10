@@ -122,6 +122,7 @@
             this.nt.Name = "nt";
             this.nt.Size = new System.Drawing.Size(100, 20);
             this.nt.TabIndex = 9;
+            this.nt.TextChanged += new System.EventHandler(this.nt_TextChanged);
             // 
             // label1
             // 
