@@ -98,5 +98,33 @@ namespace FinalProjectKel7
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }
+
+        private void nmhs_TextChanged(object sender, EventArgs e)
+        {
+            nmhs.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
+
+        private void jk_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            jk.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
+
+        private void nt_TextChanged(object sender, EventArgs e)
+        {
+            nt.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
+
+        private void am_TextChanged(object sender, EventArgs e)
+        {
+            am.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }
