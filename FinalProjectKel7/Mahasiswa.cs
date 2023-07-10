@@ -48,5 +48,10 @@ namespace FinalProjectKel7
             dataGridView1.DataSource = dataTable;
             koneksi.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
