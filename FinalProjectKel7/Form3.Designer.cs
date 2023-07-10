@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nj = new System.Windows.Forms.TextBox();
             this.ij = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nj
             // 
-            this.textBox1.Location = new System.Drawing.Point(382, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 26);
-            this.textBox1.TabIndex = 0;
+            this.nj.Location = new System.Drawing.Point(382, 271);
+            this.nj.Name = "nj";
+            this.nj.Size = new System.Drawing.Size(268, 26);
+            this.nj.TabIndex = 0;
             // 
             // ij
             // 
@@ -73,14 +73,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Nama_Jurusan";
             // 
-            // button1
+            // btnsave
             // 
-            this.button1.Location = new System.Drawing.Point(309, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnsave.Location = new System.Drawing.Point(309, 344);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(94, 35);
+            this.btnsave.TabIndex = 4;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -100,14 +100,14 @@
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnadd
             // 
-            this.button4.Location = new System.Drawing.Point(429, 344);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 35);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnadd.Location = new System.Drawing.Point(429, 344);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(94, 35);
+            this.btnadd.TabIndex = 7;
+            this.btnadd.Text = "Add";
+            this.btnadd.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -135,14 +135,14 @@
             this.ClientSize = new System.Drawing.Size(800, 414);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ij);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nj);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -154,14 +154,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nj;
         private System.Windows.Forms.TextBox ij;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

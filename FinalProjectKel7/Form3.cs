@@ -24,15 +24,11 @@ namespace FinalProjectKel7
 
         private void refreshform()
         {
-            id.Text = "";
-            nd.Text = "";
-            nt.Text = "";
-            ad.Text = "";
-            id.Enabled = true;
-            nd.Enabled = true;
-            nt.Enabled = true;
-            ad.Enabled = true;
-            btnsv.Enabled = false;
+            ij.Text = "";
+            nj.Text = "";
+            ij.Enabled = true;
+            nj.Enabled = true;
+            btnsave.Enabled = false;
             btnadd.Enabled = false;
         }
 
