@@ -32,15 +32,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.TextBox();
+            this.nt = new System.Windows.Forms.TextBox();
+            this.ad = new System.Windows.Forms.TextBox();
+            this.nd = new System.Windows.Forms.TextBox();
+            this.btnsv = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,66 +81,66 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Alamat";
             // 
-            // textBox1
+            // id
             // 
-            this.textBox1.Location = new System.Drawing.Point(298, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.id.Location = new System.Drawing.Point(298, 210);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(214, 26);
+            this.id.TabIndex = 4;
+            this.id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // nt
             // 
-            this.textBox2.Location = new System.Drawing.Point(298, 294);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 26);
-            this.textBox2.TabIndex = 5;
+            this.nt.Location = new System.Drawing.Point(298, 294);
+            this.nt.Name = "nt";
+            this.nt.Size = new System.Drawing.Size(214, 26);
+            this.nt.TabIndex = 5;
             // 
-            // textBox3
+            // ad
             // 
-            this.textBox3.Location = new System.Drawing.Point(298, 336);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(214, 26);
-            this.textBox3.TabIndex = 6;
+            this.ad.Location = new System.Drawing.Point(298, 336);
+            this.ad.Name = "ad";
+            this.ad.Size = new System.Drawing.Size(214, 26);
+            this.ad.TabIndex = 6;
             // 
-            // textBox4
+            // nd
             // 
-            this.textBox4.Location = new System.Drawing.Point(298, 248);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(214, 26);
-            this.textBox4.TabIndex = 7;
+            this.nd.Location = new System.Drawing.Point(298, 248);
+            this.nd.Name = "nd";
+            this.nd.Size = new System.Drawing.Size(214, 26);
+            this.nd.TabIndex = 7;
             // 
-            // button1
+            // btnsv
             // 
-            this.button1.Location = new System.Drawing.Point(554, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 35);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnsv.Location = new System.Drawing.Point(554, 248);
+            this.btnsv.Name = "btnsv";
+            this.btnsv.Size = new System.Drawing.Size(87, 35);
+            this.btnsv.TabIndex = 8;
+            this.btnsv.Text = "Save";
+            this.btnsv.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnadd
             // 
-            this.button2.Location = new System.Drawing.Point(554, 294);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 35);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnadd.Location = new System.Drawing.Point(554, 294);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(87, 35);
+            this.btnadd.TabIndex = 9;
+            this.btnadd.Text = "Add";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(554, 206);
+            this.button3.Location = new System.Drawing.Point(554, 336);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 35);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Cancel";
+            this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(554, 336);
+            this.button4.Location = new System.Drawing.Point(554, 201);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 35);
             this.button4.TabIndex = 11;
@@ -157,20 +158,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 12;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(537, 24);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(87, 35);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "View";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 418);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnadd);
+            this.Controls.Add(this.btnsv);
+            this.Controls.Add(this.nd);
+            this.Controls.Add(this.ad);
+            this.Controls.Add(this.nt);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -189,14 +200,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.TextBox nt;
+        private System.Windows.Forms.TextBox ad;
+        private System.Windows.Forms.TextBox nd;
+        private System.Windows.Forms.Button btnsv;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button5;
     }
 }
