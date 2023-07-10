@@ -53,5 +53,37 @@ namespace FinalProjectKel7
         {
             refreshform();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string nmMahasiswa = nmhs.Text;
+            string iMahasiswa = imhs.Text;
+            string jkMahasiswa = jk.Text;
+            string ntMahasiswa = nt.Text;
+            string almtMahasiswa = am.Text;
+
+
+            if (nmMahasiswa == "" || iMahasiswa == "" || jkMahasiswa == "" || ntMahasiswa == "" || almtMahasiswa == "")
+            {
+                MessageBox.Show("Masukkan Keduanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.prodi (id_mahasiswa, nama_mahasiswa, jk_mahasiswa, notelp_mahasiswa, alamat_mahasiswa) VALUES (@id_prodi, @nama_prodi)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_mahasiswa", iMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@nama_mahasiswa", nmMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@jk_mahasiswa", jkMahasiswa));
+                cmd.Parameters.Add(new SqlParameter("@notelp_mahasiswa", ntMahasiswa));
+                    cmd.Parameters.Add(new SqlParameter("alamat_mahasiswa", almtMahasiswa));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
+        }
     }
 }
