@@ -105,5 +105,10 @@ namespace FinalProjectKel7
             btnsave.Enabled = true;
             btnc.Enabled = true;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
