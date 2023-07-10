@@ -91,5 +91,12 @@ namespace FinalProjectKel7
             dataGridView1_CellContentClick();
             btnView.Enabled = false;
         }
+
+        private void imhs_TextChanged(object sender, EventArgs e)
+        {
+            imhs.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }

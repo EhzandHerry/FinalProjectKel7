@@ -99,6 +99,7 @@
             this.imhs.Name = "imhs";
             this.imhs.Size = new System.Drawing.Size(100, 20);
             this.imhs.TabIndex = 5;
+            this.imhs.TextChanged += new System.EventHandler(this.imhs_TextChanged);
             // 
             // nmhs
             // 
