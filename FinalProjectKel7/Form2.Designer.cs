@@ -157,7 +157,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 12;
-            // 
+            //
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(537, 24);

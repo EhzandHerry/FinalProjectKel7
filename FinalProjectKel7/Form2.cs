@@ -24,18 +24,6 @@ namespace FinalProjectKel7
 
         private void refreshform()
         {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
             id.Text = "";
             nd.Text = "";
             nt.Text = "";
@@ -48,9 +36,32 @@ namespace FinalProjectKel7
             btnadd.Enabled = false;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick()
+        {
+            koneksi.Open();
+            string str = "select id_dosen, nama_dosen, no_telp, alamat From dbo.dosen";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
         }
     }
 }
