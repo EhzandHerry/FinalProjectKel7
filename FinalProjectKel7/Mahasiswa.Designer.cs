@@ -91,6 +91,7 @@
             this.btnView.TabIndex = 4;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // imhs
             // 
@@ -98,6 +99,7 @@
             this.imhs.Name = "imhs";
             this.imhs.Size = new System.Drawing.Size(100, 20);
             this.imhs.TabIndex = 5;
+            this.imhs.TextChanged += new System.EventHandler(this.imhs_TextChanged);
             // 
             // nmhs
             // 

@@ -85,5 +85,18 @@ namespace FinalProjectKel7
                 refreshform();
             }
         }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            dataGridView1_CellContentClick();
+            btnView.Enabled = false;
+        }
+
+        private void imhs_TextChanged(object sender, EventArgs e)
+        {
+            imhs.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }
