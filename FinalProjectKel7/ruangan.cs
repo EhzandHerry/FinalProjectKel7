@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace FinalProjectKel7
 {
-    public partial class r1 : Form
+    public partial class ruangan : Form
     {
         private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=Act6;User ID=sa;Password=Conex999";
         private SqlConnection koneksi;
-        public r1()
+        public ruangan()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
@@ -50,6 +50,13 @@ namespace FinalProjectKel7
             ig.Enabled = true;
             btnsv.Enabled = true;
             btnc.Enabled = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ruangan r1 = new ruangan();
+            r1.Show();
+            this.Hide();
         }
     }
 }

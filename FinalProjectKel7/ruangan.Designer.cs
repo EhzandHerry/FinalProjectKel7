@@ -1,6 +1,6 @@
 ﻿namespace FinalProjectKel7
 {
-    partial class r1
+    partial class ruangan
     {
         /// <summary>
         /// Required designer variable.
@@ -77,6 +77,7 @@
             this.button4.TabIndex = 49;
             this.button4.Text = "Back";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnc
             // 
@@ -147,7 +148,7 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Id_Gedung";
             // 
-            // r1
+            // ruangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +165,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "r1";
+            this.Name = "ruangan";
             this.Text = "ruangan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
