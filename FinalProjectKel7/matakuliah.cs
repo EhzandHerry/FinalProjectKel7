@@ -101,5 +101,11 @@ namespace FinalProjectKel7
         {
 
         }
+
+        private void btnview_Click(object sender, EventArgs e)
+        {
+            dataGridView1_CellContentClick();
+            btnview.Enabled = false;
+        }
     }
 }
