@@ -77,6 +77,7 @@ namespace FinalProjectKel7
         {
             cbxmhs();
             cbxd();
+            cbxmatkul();
         }
 
         private void cbxmhs()
@@ -127,6 +128,29 @@ namespace FinalProjectKel7
             cbxD.DataSource = dt;
         }
 
+        private void cbxmatkul()
+        {
+            koneksi.Open();
+            string query = "SELECT id_matakul FROM matakuliah";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_matakul");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_matakul"] = reader["id_matakul"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxMatkul.DisplayMember = "id_matakul";
+            cbxMatkul.ValueMember = "id_matakul";
+            cbxMatkul.DataSource = dt;
+        }
 
     }
 }
