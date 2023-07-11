@@ -46,7 +46,9 @@ namespace FinalProjectKel7
 
         private void id_TextChanged(object sender, EventArgs e)
         {
-
+            im.Enabled = true;
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
