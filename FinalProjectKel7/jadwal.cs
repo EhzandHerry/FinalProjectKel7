@@ -78,6 +78,7 @@ namespace FinalProjectKel7
             cbxmhs();
             cbxd();
             cbxmatkul();
+            cbxj();
         }
 
         private void cbxmhs()
@@ -150,6 +151,30 @@ namespace FinalProjectKel7
             cbxMatkul.DisplayMember = "id_matakul";
             cbxMatkul.ValueMember = "id_matakul";
             cbxMatkul.DataSource = dt;
+        }
+
+        private void cbxj()
+        {
+            koneksi.Open();
+            string query = "SELECT id_jurusan FROM jurusan";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_jurusan");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_jurusan"] = reader["id_jurusan"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxJ.DisplayMember = "id_jurusan";
+            cbxJ.ValueMember = "id_jurusan";
+            cbxJ.DataSource = dt;
         }
 
     }
