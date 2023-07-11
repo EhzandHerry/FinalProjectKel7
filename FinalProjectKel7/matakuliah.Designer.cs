@@ -81,6 +81,7 @@
             this.btnc.TabIndex = 24;
             this.btnc.Text = "Clear";
             this.btnc.UseVisualStyleBackColor = true;
+            this.btnc.Click += new System.EventHandler(this.btnc_Click);
             // 
             // btnadd
             // 
