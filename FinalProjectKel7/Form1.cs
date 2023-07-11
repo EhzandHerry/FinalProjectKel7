@@ -44,5 +44,12 @@ namespace FinalProjectKel7
             m1.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ruangan r1 = new ruangan();
+            r1.Show();
+            this.Hide();
+        }
     }
 }
