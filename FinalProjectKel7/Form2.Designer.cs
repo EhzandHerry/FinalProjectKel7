@@ -53,6 +53,7 @@
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id_Dosen";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -62,6 +63,7 @@
             this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nama_Dosen";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -71,6 +73,7 @@
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "No_Telp";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -80,6 +83,7 @@
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Alamat";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // id
             // 
