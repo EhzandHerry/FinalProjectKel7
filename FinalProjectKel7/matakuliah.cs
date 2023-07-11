@@ -48,5 +48,12 @@ namespace FinalProjectKel7
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            matakuliah m1 = new matakuliah();
+            m1.Show();
+            this.Hide();
+        }
     }
 }
