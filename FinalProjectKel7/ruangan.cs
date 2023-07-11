@@ -97,5 +97,12 @@ namespace FinalProjectKel7
             dataGridView1_CellContentClick();
             btnview.Enabled = false;
         }
+
+        private void ng_TextChanged(object sender, EventArgs e)
+        {
+            ng.Enabled = true;
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
+        }
     }
 }

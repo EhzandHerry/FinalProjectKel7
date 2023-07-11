@@ -115,6 +115,7 @@
             this.ng.Name = "ng";
             this.ng.Size = new System.Drawing.Size(214, 26);
             this.ng.TabIndex = 45;
+            this.ng.TextChanged += new System.EventHandler(this.ng_TextChanged);
             // 
             // ig
             // 
