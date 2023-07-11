@@ -39,10 +39,10 @@ namespace FinalProjectKel7
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick()
         {
             koneksi.Open();
-            string str = "select id_matakul, nama_matkul From dbo.matakuliah";
+            string str = "select id_matakul, nama_matkul, sks From dbo.Matakuliah";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
@@ -67,6 +67,39 @@ namespace FinalProjectKel7
         private void btnc_Click(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void btnsv_Click(object sender, EventArgs e)
+        {
+            string idMatkul = im.Text;
+            string nMatkul = nm.Text;
+            string sks = this.sks.Text;
+
+
+            if (idMatkul == "" || nMatkul == "" || sks == "")
+            {
+                MessageBox.Show("Masukkan Semuanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.prodi (id_matkul, nama_matkul, sks) VALUES (@id_matkul, @nama_matkul, @sks)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_matkul", idMatkul));
+                cmd.Parameters.Add(new SqlParameter("@nama_matkul", nMatkul));
+                cmd.Parameters.Add(new SqlParameter("@sks", sks));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
+        }
+
+        private void sks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

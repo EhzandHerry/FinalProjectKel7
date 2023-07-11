@@ -61,7 +61,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 26;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button4
             // 
@@ -100,6 +99,7 @@
             this.btnsv.TabIndex = 22;
             this.btnsv.Text = "Save";
             this.btnsv.UseVisualStyleBackColor = true;
+            this.btnsv.Click += new System.EventHandler(this.btnsv_Click);
             // 
             // nm
             // 
@@ -151,6 +151,7 @@
             this.sks.Name = "sks";
             this.sks.Size = new System.Drawing.Size(214, 28);
             this.sks.TabIndex = 28;
+            this.sks.SelectedIndexChanged += new System.EventHandler(this.sks_SelectedIndexChanged);
             // 
             // matakuliah
             // 
