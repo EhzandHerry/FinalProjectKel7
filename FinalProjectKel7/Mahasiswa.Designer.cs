@@ -45,15 +45,16 @@
             this.jk = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(235, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(107, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(400, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 193);
             this.dataGridView1.TabIndex = 0;
             // 
             // add
@@ -88,7 +89,7 @@
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(656, 45);
+            this.btnView.Location = new System.Drawing.Point(684, 23);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(75, 23);
             this.btnView.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             this.imhs.Location = new System.Drawing.Point(315, 231);
             this.imhs.Name = "imhs";
-            this.imhs.Size = new System.Drawing.Size(100, 20);
+            this.imhs.Size = new System.Drawing.Size(170, 20);
             this.imhs.TabIndex = 5;
             this.imhs.TextChanged += new System.EventHandler(this.imhs_TextChanged);
             // 
@@ -108,7 +109,7 @@
             // 
             this.nmhs.Location = new System.Drawing.Point(315, 257);
             this.nmhs.Name = "nmhs";
-            this.nmhs.Size = new System.Drawing.Size(100, 20);
+            this.nmhs.Size = new System.Drawing.Size(170, 20);
             this.nmhs.TabIndex = 6;
             this.nmhs.TextChanged += new System.EventHandler(this.nmhs_TextChanged);
             // 
@@ -116,7 +117,7 @@
             // 
             this.am.Location = new System.Drawing.Point(315, 336);
             this.am.Name = "am";
-            this.am.Size = new System.Drawing.Size(100, 20);
+            this.am.Size = new System.Drawing.Size(170, 20);
             this.am.TabIndex = 8;
             this.am.TextChanged += new System.EventHandler(this.am_TextChanged);
             // 
@@ -124,7 +125,7 @@
             // 
             this.nt.Location = new System.Drawing.Point(315, 310);
             this.nt.Name = "nt";
-            this.nt.Size = new System.Drawing.Size(100, 20);
+            this.nt.Size = new System.Drawing.Size(170, 20);
             this.nt.TabIndex = 9;
             this.nt.TextChanged += new System.EventHandler(this.nt_TextChanged);
             // 
@@ -181,7 +182,7 @@
             "P"});
             this.jk.Location = new System.Drawing.Point(315, 283);
             this.jk.Name = "jk";
-            this.jk.Size = new System.Drawing.Size(121, 21);
+            this.jk.Size = new System.Drawing.Size(170, 21);
             this.jk.TabIndex = 15;
             this.jk.SelectedIndexChanged += new System.EventHandler(this.jk_SelectedIndexChanged);
             // 
@@ -205,11 +206,23 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(662, 242);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Mahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.jk);
@@ -254,5 +267,6 @@
         private System.Windows.Forms.ComboBox jk;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

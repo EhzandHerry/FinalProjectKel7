@@ -39,7 +39,7 @@ namespace FinalProjectKel7
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1_CellContentClick();
-            button1.Enabled = false;
+            btnView.Enabled = false;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace FinalProjectKel7
             Form1 f1 = new Form1();
             f1.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -184,5 +184,80 @@ namespace FinalProjectKel7
                 }
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_mhs"].Value.ToString();
+            string nmMahasiswa = nmhs.Text;
+            
+            string jkMahasiswa = jk.Text;
+            string ntMahasiswa = nt.Text;
+            string almtMahasiswa = am.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("Id Mahasiswa tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nmMahasiswa == "")
+            {
+                MessageBox.Show("Masukkan Nama Mahasiswa", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (jkMahasiswa == "")
+            {
+                MessageBox.Show("Masukkan Jenis Kelamin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (ntMahasiswa == "")
+            {
+                MessageBox.Show("Masukkan NO Telp", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (almtMahasiswa == "")
+            {
+                MessageBox.Show("Masukkan Alamat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE mahasiswa SET nama_mhs = @nama_mhs, jenis_kelamin = @jenis_kelamin, no_telp = @no_telp, alamat = @alamat WHERE id_mhs = @id_mhs";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_mhs", id);
+                command.Parameters.AddWithValue("@nama_mhs", nmMahasiswa);
+                command.Parameters.AddWithValue("@jenis_kelamin", jkMahasiswa);
+                command.Parameters.AddWithValue("@no_telp", ntMahasiswa);
+                command.Parameters.AddWithValue("@alamat", almtMahasiswa);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView1_CellContentClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+        }
     }
 }
