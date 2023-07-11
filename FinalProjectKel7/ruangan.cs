@@ -58,5 +58,10 @@ namespace FinalProjectKel7
             r1.Show();
             this.Hide();
         }
+
+        private void btnc_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
