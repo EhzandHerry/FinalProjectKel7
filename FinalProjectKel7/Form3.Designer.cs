@@ -43,43 +43,48 @@
             // 
             // nj
             // 
-            this.nj.Location = new System.Drawing.Point(382, 271);
+            this.nj.Location = new System.Drawing.Point(255, 301);
+            this.nj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nj.Name = "nj";
-            this.nj.Size = new System.Drawing.Size(268, 26);
+            this.nj.Size = new System.Drawing.Size(180, 20);
             this.nj.TabIndex = 0;
             this.nj.TextChanged += new System.EventHandler(this.nj_TextChanged);
             // 
             // ij
             // 
-            this.ij.Location = new System.Drawing.Point(382, 221);
+            this.ij.Location = new System.Drawing.Point(255, 261);
+            this.ij.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ij.Name = "ij";
-            this.ij.Size = new System.Drawing.Size(268, 26);
+            this.ij.Size = new System.Drawing.Size(180, 20);
             this.ij.TabIndex = 1;
             this.ij.TextChanged += new System.EventHandler(this.ij_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 221);
+            this.label1.Location = new System.Drawing.Point(159, 264);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Id_Jurusan";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 271);
+            this.label2.Location = new System.Drawing.Point(159, 308);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nama_Jurusan";
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(309, 344);
+            this.btnsave.Location = new System.Drawing.Point(255, 373);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(94, 35);
+            this.btnsave.Size = new System.Drawing.Size(63, 23);
             this.btnsave.TabIndex = 4;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
@@ -87,9 +92,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(188, 344);
+            this.button2.Location = new System.Drawing.Point(619, 373);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 35);
+            this.button2.Size = new System.Drawing.Size(63, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // 
             // btnc
             // 
-            this.btnc.Location = new System.Drawing.Point(556, 344);
+            this.btnc.Location = new System.Drawing.Point(414, 373);
+            this.btnc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnc.Name = "btnc";
-            this.btnc.Size = new System.Drawing.Size(94, 35);
+            this.btnc.Size = new System.Drawing.Size(63, 23);
             this.btnc.TabIndex = 6;
             this.btnc.Text = "Clear";
             this.btnc.UseVisualStyleBackColor = true;
@@ -107,18 +114,20 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(429, 344);
+            this.btnadd.Location = new System.Drawing.Point(495, 259);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(94, 35);
+            this.btnadd.Size = new System.Drawing.Size(63, 23);
             this.btnadd.TabIndex = 7;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
             // 
             // btnview
             // 
-            this.btnview.Location = new System.Drawing.Point(524, 23);
+            this.btnview.Location = new System.Drawing.Point(619, 39);
+            this.btnview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnview.Name = "btnview";
-            this.btnview.Size = new System.Drawing.Size(94, 35);
+            this.btnview.Size = new System.Drawing.Size(63, 23);
             this.btnview.TabIndex = 8;
             this.btnview.Text = "View";
             this.btnview.UseVisualStyleBackColor = true;
@@ -127,18 +136,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(213, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(142, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(292, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(438, 211);
             this.dataGridView1.TabIndex = 9;
+         
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 414);
+            this.ClientSize = new System.Drawing.Size(722, 437);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnview);
             this.Controls.Add(this.btnadd);
@@ -149,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ij);
             this.Controls.Add(this.nj);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);

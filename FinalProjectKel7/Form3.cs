@@ -13,7 +13,7 @@ namespace FinalProjectKel7
 {
     public partial class Form3 : Form
     {
-        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=Act6;User ID=sa;Password=Conex999";
+        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=DBJadwalAkademik;User ID=sa;Password=Conex999";
         private SqlConnection koneksi;
         public Form3()
         {
@@ -29,7 +29,7 @@ namespace FinalProjectKel7
             ij.Enabled = true;
             nj.Enabled = true;
             btnsave.Enabled = false;
-            btnadd.Enabled = false;
+            btnc.Enabled = false;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -51,16 +51,12 @@ namespace FinalProjectKel7
             btnc.Enabled = true;
         }
 
-        private void dataGridView1_CellContentClick()
-        {
-            koneksi.Open();
-            string str = "select id_jurusan, nama_jurusan From dbo.jurusan";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataTable dataTable = new DataTable();
-            da.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-            koneksi.Close();
-        }
+
+
+
+
+
+
 
         private void btnc_Click(object sender, EventArgs e)
         {
@@ -80,7 +76,7 @@ namespace FinalProjectKel7
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.prodi (id_jurusan, nama_jurusan) VALUES (@id_jurusan, @nama_jurusan)";
+                string str = "insert into dbo.jurusan (id_jurusan, nama_jurusan) VALUES (@id_jurusan, @nama_jurusan)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_jurusan", idJurusan));
@@ -88,14 +84,14 @@ namespace FinalProjectKel7
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
-                dataGridView1_CellContentClick();
+                dataGridView1_CellContentClick_1();
                 refreshform();
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            dataGridView1_CellContentClick();
+            dataGridView1_CellContentClick_1();
             btnview.Enabled = false;
         }
 
@@ -109,6 +105,17 @@ namespace FinalProjectKel7
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick_1()
+        {
+            koneksi.Open();
+            string str = "select id_jurusan, nama_jurusan From dbo.jurusan";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
         }
     }
 }
