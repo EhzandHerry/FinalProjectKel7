@@ -196,5 +196,72 @@ namespace FinalProjectKel7
         {
 
         }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_dosen"].Value.ToString();
+            string nDosen = nd.Text;
+            string ntDosen = nt.Text;
+            string aDosen = ad.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("Id Dosen tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nDosen == "")
+            {
+                MessageBox.Show("Masukkan Nama Dosen", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (ntDosen == "")
+            {
+                MessageBox.Show("Masukkan NO Telp", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (aDosen == "")
+            {
+                MessageBox.Show("Masukkan Alamat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE dosen SET nama_dosen = @nama_dosen, no_telp = @no_telp, alamat = @alamat WHERE id_dosen = @id_dosen";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_dosen", id);
+                command.Parameters.AddWithValue("@nama_dosen", nDosen);
+
+                command.Parameters.AddWithValue("@no_telp", ntDosen);
+                command.Parameters.AddWithValue("@alamat", aDosen);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView1_CellContentClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
     }
 }
