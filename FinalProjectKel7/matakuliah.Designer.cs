@@ -108,6 +108,7 @@
             this.nm.Name = "nm";
             this.nm.Size = new System.Drawing.Size(214, 26);
             this.nm.TabIndex = 21;
+            this.nm.TextChanged += new System.EventHandler(this.nm_TextChanged);
             // 
             // im
             // 

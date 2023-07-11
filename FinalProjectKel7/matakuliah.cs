@@ -107,5 +107,12 @@ namespace FinalProjectKel7
             dataGridView1_CellContentClick();
             btnview.Enabled = false;
         }
+
+        private void nm_TextChanged(object sender, EventArgs e)
+        {
+            nm.Enabled = true;
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
+        }
     }
 }
