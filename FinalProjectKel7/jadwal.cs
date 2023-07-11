@@ -76,6 +76,7 @@ namespace FinalProjectKel7
         private void btnAdd_Click(object sender, EventArgs e)
         {
             cbxmhs();
+            cbxd();
         }
 
         private void cbxmhs()
@@ -102,6 +103,30 @@ namespace FinalProjectKel7
             cbxMhs.DataSource = dt;
         }
 
-      
+        private void cbxd()
+        {
+            koneksi.Open();
+            string query = "SELECT id_dosen FROM dosen";
+            SqlCommand cmd = new SqlCommand(query, koneksi);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_dosen");
+
+            while (reader.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["id_dosen"] = reader["id_dosen"].ToString();
+                dt.Rows.Add(row);
+            }
+
+            koneksi.Close();
+
+            cbxD.DisplayMember = "id_dosen";
+            cbxD.ValueMember = "id_dosen";
+            cbxD.DataSource = dt;
+        }
+
+
     }
 }
