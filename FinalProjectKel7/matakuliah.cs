@@ -13,7 +13,7 @@ namespace FinalProjectKel7
 {
     public partial class matakuliah : Form
     {
-        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=Act6;User ID=sa;Password=Conex999";
+        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=DBJadwalAkademik;User ID=sa;Password=Conex999";
         private SqlConnection koneksi;
         public matakuliah()
         {
@@ -31,7 +31,7 @@ namespace FinalProjectKel7
             nm.Enabled = true;
             sks.Enabled = true;
             btnsv.Enabled = false;
-            btnadd.Enabled = false;
+            btnc.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,16 +39,7 @@ namespace FinalProjectKel7
 
         }
 
-        private void dataGridView1_CellContentClick()
-        {
-            koneksi.Open();
-            string str = "select id_matakul, nama_matkul, sks From dbo.Matakuliah";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataTable dataTable = new DataTable();
-            da.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-            koneksi.Close();
-        }
+        
 
         private void id_TextChanged(object sender, EventArgs e)
         {
@@ -59,8 +50,8 @@ namespace FinalProjectKel7
 
         private void button4_Click(object sender, EventArgs e)
         {
-            matakuliah m1 = new matakuliah();
-            m1.Show();
+            Form1 f1 = new Form1();
+            f1.Show();
             this.Hide();
         }
 
@@ -83,10 +74,10 @@ namespace FinalProjectKel7
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.prodi (id_matkul, nama_matkul, sks) VALUES (@id_matkul, @nama_matkul, @sks)";
+                string str = "insert into dbo.matakuliah (id_matakul, nama_matkul, sks) VALUES (@id_matakul, @nama_matkul, @sks)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@id_matkul", idMatkul));
+                cmd.Parameters.Add(new SqlParameter("@id_matakul", idMatkul));
                 cmd.Parameters.Add(new SqlParameter("@nama_matkul", nMatkul));
                 cmd.Parameters.Add(new SqlParameter("@sks", sks));
                 cmd.ExecuteNonQuery();
@@ -122,9 +113,15 @@ namespace FinalProjectKel7
             btnc.Enabled = true;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick()
         {
-
+            koneksi.Open();
+            string str = "select id_matakul, nama_matkul, sks From dbo.matakuliah";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
         }
     }
 }
