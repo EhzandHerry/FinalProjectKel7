@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.sks = new System.Windows.Forms.ComboBox();
+            this.Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,11 +170,22 @@
             this.sks.Size = new System.Drawing.Size(142, 21);
             this.sks.TabIndex = 28;
             // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(538, 219);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 29;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // matakuliah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 419);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.sks);
             this.Controls.Add(this.btnview);
             this.Controls.Add(this.dataGridView1);
@@ -209,5 +221,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox sks;
+        private System.Windows.Forms.Button Delete;
     }
 }
