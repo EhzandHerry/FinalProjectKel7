@@ -51,5 +51,12 @@ namespace FinalProjectKel7
             r1.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            jadwal j1 = new jadwal();
+            j1.Show();
+            this.Hide();
+        }
     }
 }

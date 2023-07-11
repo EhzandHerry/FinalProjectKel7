@@ -29,3 +29,4 @@ D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.Form2.resou
 D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.Form3.resources
 D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.matakuliah.resources
 D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.ruangan.resources
+D:\PABD\FinalProjectKel7\FinalProjectKel7\obj\Debug\FinalProjectKel7.jadwal.resources

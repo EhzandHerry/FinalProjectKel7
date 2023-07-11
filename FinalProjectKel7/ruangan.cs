@@ -13,7 +13,7 @@ namespace FinalProjectKel7
 {
     public partial class ruangan : Form
     {
-        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=Act6;User ID=sa;Password=Conex999";
+        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=DBJadwalAkademik;User ID=sa;Password=Conex999";
         private SqlConnection koneksi;
         public ruangan()
         {
@@ -31,19 +31,10 @@ namespace FinalProjectKel7
             ng.Enabled = true;
             rg.Enabled = true;
             btnsv.Enabled = false;
-            btnadd.Enabled = false;
+            btnc.Enabled = false;
         }
 
-        private void dataGridView1_CellContentClick()
-        {
-            koneksi.Open();
-            string str = "select id_gedung, nama_gedung, ruangan From dbo.Ruangan";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataTable dataTable = new DataTable();
-            da.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-            koneksi.Close();
-        }
+        
 
         private void ig_TextChanged(object sender, EventArgs e)
         {
@@ -52,12 +43,7 @@ namespace FinalProjectKel7
             btnc.Enabled = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ruangan r1 = new ruangan();
-            r1.Show();
-            this.Hide();
-        }
+        
 
         private void btnc_Click(object sender, EventArgs e)
         {
@@ -68,7 +54,7 @@ namespace FinalProjectKel7
         {
             string idGedung = ig.Text;
             string nGedung = ng.Text;
-            string ruangan = this.rg.Text;
+            string ruangan = rg.Text;
 
 
             if (idGedung == "" || nGedung == "" || ruangan == "")
@@ -78,7 +64,7 @@ namespace FinalProjectKel7
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.prodi (id_gedung, nama_gedung, ruangan) VALUES (@id_gedung, @nama_gedung, @ruangan)";
+                string str = "insert into dbo.gedung (id_gedung, nama_gedung, ruangan) VALUES (@id_gedung, @nama_gedung, @ruangan)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_gedung", idGedung));
@@ -112,9 +98,22 @@ namespace FinalProjectKel7
             btnc.Enabled = true;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick()
         {
+            koneksi.Open();
+            string str = "select id_gedung, nama_gedung, ruangan From dbo.gedung";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+        }
 
+        private void back_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
         }
     }
 }

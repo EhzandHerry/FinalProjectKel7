@@ -31,7 +31,7 @@
             this.rg = new System.Windows.Forms.TextBox();
             this.btnview = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.btnc = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsv = new System.Windows.Forms.Button();
@@ -45,17 +45,19 @@
             // 
             // rg
             // 
-            this.rg.Location = new System.Drawing.Point(253, 347);
+            this.rg.Location = new System.Drawing.Point(328, 360);
+            this.rg.Margin = new System.Windows.Forms.Padding(2);
             this.rg.Name = "rg";
-            this.rg.Size = new System.Drawing.Size(214, 26);
+            this.rg.Size = new System.Drawing.Size(144, 20);
             this.rg.TabIndex = 52;
             this.rg.TextChanged += new System.EventHandler(this.rg_TextChanged);
             // 
             // btnview
             // 
-            this.btnview.Location = new System.Drawing.Point(492, 77);
+            this.btnview.Location = new System.Drawing.Point(684, 50);
+            this.btnview.Margin = new System.Windows.Forms.Padding(2);
             this.btnview.Name = "btnview";
-            this.btnview.Size = new System.Drawing.Size(87, 35);
+            this.btnview.Size = new System.Drawing.Size(58, 23);
             this.btnview.TabIndex = 51;
             this.btnview.Text = "View";
             this.btnview.UseVisualStyleBackColor = true;
@@ -64,29 +66,31 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(227, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(194, 50);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(459, 179);
             this.dataGridView1.TabIndex = 50;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button4
+            // back
             // 
-            this.button4.Location = new System.Drawing.Point(509, 254);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 35);
-            this.button4.TabIndex = 49;
-            this.button4.Text = "Back";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.back.Location = new System.Drawing.Point(684, 421);
+            this.back.Margin = new System.Windows.Forms.Padding(2);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(58, 23);
+            this.back.TabIndex = 49;
+            this.back.Text = "Back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // btnc
             // 
-            this.btnc.Location = new System.Drawing.Point(617, 254);
+            this.btnc.Location = new System.Drawing.Point(532, 270);
+            this.btnc.Margin = new System.Windows.Forms.Padding(2);
             this.btnc.Name = "btnc";
-            this.btnc.Size = new System.Drawing.Size(87, 35);
+            this.btnc.Size = new System.Drawing.Size(58, 23);
             this.btnc.TabIndex = 48;
             this.btnc.Text = "Clear";
             this.btnc.UseVisualStyleBackColor = true;
@@ -94,18 +98,20 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(617, 301);
+            this.btnadd.Location = new System.Drawing.Point(532, 312);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(87, 35);
+            this.btnadd.Size = new System.Drawing.Size(58, 23);
             this.btnadd.TabIndex = 47;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
             // 
             // btnsv
             // 
-            this.btnsv.Location = new System.Drawing.Point(509, 301);
+            this.btnsv.Location = new System.Drawing.Point(532, 357);
+            this.btnsv.Margin = new System.Windows.Forms.Padding(2);
             this.btnsv.Name = "btnsv";
-            this.btnsv.Size = new System.Drawing.Size(87, 35);
+            this.btnsv.Size = new System.Drawing.Size(58, 23);
             this.btnsv.TabIndex = 46;
             this.btnsv.Text = "Save";
             this.btnsv.UseVisualStyleBackColor = true;
@@ -113,56 +119,61 @@
             // 
             // ng
             // 
-            this.ng.Location = new System.Drawing.Point(253, 301);
+            this.ng.Location = new System.Drawing.Point(328, 315);
+            this.ng.Margin = new System.Windows.Forms.Padding(2);
             this.ng.Name = "ng";
-            this.ng.Size = new System.Drawing.Size(214, 26);
+            this.ng.Size = new System.Drawing.Size(144, 20);
             this.ng.TabIndex = 45;
             this.ng.TextChanged += new System.EventHandler(this.ng_TextChanged);
             // 
             // ig
             // 
-            this.ig.Location = new System.Drawing.Point(253, 263);
+            this.ig.Location = new System.Drawing.Point(328, 273);
+            this.ig.Margin = new System.Windows.Forms.Padding(2);
             this.ig.Name = "ig";
-            this.ig.Size = new System.Drawing.Size(214, 26);
+            this.ig.Size = new System.Drawing.Size(144, 20);
             this.ig.TabIndex = 44;
             this.ig.TextChanged += new System.EventHandler(this.ig_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 347);
+            this.label3.Location = new System.Drawing.Point(208, 367);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 43;
             this.label3.Text = "Ruangan";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 304);
+            this.label2.Location = new System.Drawing.Point(208, 322);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 42;
             this.label2.Text = "Nama_Gedung";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 263);
+            this.label1.Location = new System.Drawing.Point(208, 280);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 41;
             this.label1.Text = "Id_Gedung";
             // 
             // ruangan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(805, 484);
             this.Controls.Add(this.rg);
             this.Controls.Add(this.btnview);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.btnc);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnsv);
@@ -171,6 +182,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ruangan";
             this.Text = "ruangan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -184,7 +196,7 @@
         private System.Windows.Forms.TextBox rg;
         private System.Windows.Forms.Button btnview;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button btnc;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsv;
