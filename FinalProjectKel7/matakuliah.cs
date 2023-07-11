@@ -41,7 +41,13 @@ namespace FinalProjectKel7
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            koneksi.Open();
+            string str = "select id_matakul, nama_matkul From dbo.matakuliah";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            da.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
         }
 
         private void id_TextChanged(object sender, EventArgs e)
