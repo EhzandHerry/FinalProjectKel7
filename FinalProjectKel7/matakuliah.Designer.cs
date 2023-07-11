@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.sks = new System.Windows.Forms.ComboBox();
+            this.sks = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,12 +148,11 @@
             // 
             // sks
             // 
-            this.sks.FormattingEnabled = true;
             this.sks.Location = new System.Drawing.Point(307, 322);
             this.sks.Name = "sks";
-            this.sks.Size = new System.Drawing.Size(214, 28);
+            this.sks.Size = new System.Drawing.Size(214, 26);
             this.sks.TabIndex = 28;
-            this.sks.SelectedIndexChanged += new System.EventHandler(this.sks_SelectedIndexChanged);
+            this.sks.TextChanged += new System.EventHandler(this.sks_TextChanged);
             // 
             // matakuliah
             // 
@@ -193,6 +192,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox sks;
+        private System.Windows.Forms.TextBox sks;
     }
 }
