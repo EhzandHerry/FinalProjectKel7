@@ -57,7 +57,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, -1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(413, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(654, 183);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -150,15 +150,16 @@
             // 
             this.nh.Location = new System.Drawing.Point(120, 217);
             this.nh.Name = "nh";
-            this.nh.Size = new System.Drawing.Size(100, 20);
+            this.nh.Size = new System.Drawing.Size(121, 20);
             this.nh.TabIndex = 10;
             // 
             // ij
             // 
             this.ij.Location = new System.Drawing.Point(120, 188);
             this.ij.Name = "ij";
-            this.ij.Size = new System.Drawing.Size(100, 20);
+            this.ij.Size = new System.Drawing.Size(121, 20);
             this.ij.TabIndex = 11;
+            this.ij.TextChanged += new System.EventHandler(this.ij_TextChanged);
             // 
             // cbxMhs
             // 
@@ -218,6 +219,7 @@
             this.btnsv.TabIndex = 18;
             this.btnsv.Text = "Save";
             this.btnsv.UseVisualStyleBackColor = true;
+            this.btnsv.Click += new System.EventHandler(this.btnsv_Click);
             // 
             // btnc
             // 
