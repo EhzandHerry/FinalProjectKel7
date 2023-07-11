@@ -64,10 +64,10 @@ namespace FinalProjectKel7
         {
             string idMatkul = im.Text;
             string nMatkul = nm.Text;
-            string sks = this.sks.Text;
+            string sksMatkul = sks.Text;
 
 
-            if (idMatkul == "" || nMatkul == "" || sks == "")
+            if (idMatkul == "" || nMatkul == "" || sksMatkul == "")
             {
                 MessageBox.Show("Masukkan Semuanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -79,7 +79,7 @@ namespace FinalProjectKel7
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_matakul", idMatkul));
                 cmd.Parameters.Add(new SqlParameter("@nama_matkul", nMatkul));
-                cmd.Parameters.Add(new SqlParameter("@sks", sks));
+                cmd.Parameters.Add(new SqlParameter("@sks", sksMatkul));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.Close();
@@ -159,6 +159,66 @@ namespace FinalProjectKel7
                 {
                     MessageBox.Show("Kesalahan " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_matakul"].Value.ToString();
+            string nMatkul = nm.Text;
+            string sksMatkul = sks.Text;
+
+            if (id == "")
+            {
+                MessageBox.Show("Id Matakuliah tidak valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nMatkul == "")
+            {
+                MessageBox.Show("Masukkan Nama Matkul", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (sksMatkul == "")
+            {
+                MessageBox.Show("Masukkan jumlah sks", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            string sql = "UPDATE matakuliah SET nama_matkul = @nama_matkul, sks = @sks WHERE id_matakul = @id_matakul";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_matakul", id);
+                command.Parameters.AddWithValue("@nama_matkul", nMatkul);
+                command.Parameters.AddWithValue("@sks", sksMatkul);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView1_CellContentClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }

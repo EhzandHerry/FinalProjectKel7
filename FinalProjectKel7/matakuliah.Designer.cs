@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.sks = new System.Windows.Forms.ComboBox();
             this.Delete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,11 +181,22 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(538, 264);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 30;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // matakuliah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 434);
+            this.ClientSize = new System.Drawing.Size(760, 444);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.sks);
             this.Controls.Add(this.btnview);
@@ -222,5 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox sks;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
