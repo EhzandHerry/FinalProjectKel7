@@ -140,5 +140,11 @@ namespace FinalProjectKel7
             f1.Show();
             this.Hide();
         }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+        }
     }
 }

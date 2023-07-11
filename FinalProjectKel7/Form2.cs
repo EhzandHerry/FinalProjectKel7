@@ -13,7 +13,7 @@ namespace FinalProjectKel7
 {
     public partial class Form2 : Form
     {
-        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=Act6;User ID=sa;Password=Conex999";
+        private string stringConnection = "Data Source=LAPTOP-G2F55ONU\\EHZANDHERRY;" + "database=DBJadwalAkademik;User ID=sa;Password=Conex999";
         private SqlConnection koneksi;
         public Form2()
         {
@@ -33,7 +33,7 @@ namespace FinalProjectKel7
             nt.Enabled = true;
             ad.Enabled = true;
             btnsv.Enabled = false;
-            btnadd.Enabled = false;
+            btnc.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -52,7 +52,8 @@ namespace FinalProjectKel7
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
         }
 
         private void dataGridView1_CellContentClick()
@@ -86,7 +87,7 @@ namespace FinalProjectKel7
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.prodi (id_dosen, nama_dosen, no_telp, alamat) VALUES (@id_dosen, @nama_dosen, @no_telp, @alamat)";
+                string str = "insert into dbo.dosen (id_dosen, nama_dosen, no_telp, alamat) VALUES (@id_dosen, @nama_dosen, @no_telp, @alamat)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_dosen", idDosen));
