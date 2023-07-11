@@ -63,5 +63,33 @@ namespace FinalProjectKel7
         {
             refreshform();
         }
+
+        private void btnsv_Click(object sender, EventArgs e)
+        {
+            string idGedung = ig.Text;
+            string nGedung = ng.Text;
+            string ruangan = this.rg.Text;
+
+
+            if (idGedung == "" || nGedung == "" || ruangan == "")
+            {
+                MessageBox.Show("Masukkan Semuanya", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.prodi (id_gedung, nama_gedung, ruangan) VALUES (@id_gedung, @nama_gedung, @ruangan)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_gedung", idGedung));
+                cmd.Parameters.Add(new SqlParameter("@nama_gedung", nGedung));
+                cmd.Parameters.Add(new SqlParameter("@ruangan", ruangan));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                koneksi.Close();
+                dataGridView1_CellContentClick();
+                refreshform();
+            }
+        }
     }
 }

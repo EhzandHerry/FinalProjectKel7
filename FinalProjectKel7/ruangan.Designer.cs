@@ -106,6 +106,7 @@
             this.btnsv.TabIndex = 46;
             this.btnsv.Text = "Save";
             this.btnsv.UseVisualStyleBackColor = true;
+            this.btnsv.Click += new System.EventHandler(this.btnsv_Click);
             // 
             // ng
             // 
