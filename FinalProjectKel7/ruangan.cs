@@ -104,5 +104,12 @@ namespace FinalProjectKel7
             btnsv.Enabled = true;
             btnc.Enabled = true;
         }
+
+        private void rg_TextChanged(object sender, EventArgs e)
+        {
+            rg.Enabled = true;
+            btnsv.Enabled = true;
+            btnc.Enabled = true;
+        }
     }
 }

@@ -49,6 +49,7 @@
             this.rg.Name = "rg";
             this.rg.Size = new System.Drawing.Size(214, 26);
             this.rg.TabIndex = 52;
+            this.rg.TextChanged += new System.EventHandler(this.rg_TextChanged);
             // 
             // btnview
             // 
