@@ -29,11 +29,11 @@ namespace FinalProjectKel7
             jk.Text = "";
             nt.Text = "";
             am.Text = "";
-            imhs.Enabled = true;
-            nmhs.Enabled = true;
-            jk.Enabled = true;
-            nt.Enabled = true;
-            am.Enabled = true;
+            imhs.Enabled = false;
+            nmhs.Enabled = false;
+            jk.Enabled = false;
+            nt.Enabled = false;
+            am.Enabled = false;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
@@ -94,37 +94,27 @@ namespace FinalProjectKel7
 
         private void imhs_TextChanged(object sender, EventArgs e)
         {
-            imhs.Enabled = true;
-            btnSave.Enabled = true;
-            btnClear.Enabled = true;
+            
         }
 
         private void nmhs_TextChanged(object sender, EventArgs e)
         {
-            nmhs.Enabled = true;
-            btnSave.Enabled = true;
-            btnClear.Enabled = true;
+            
         }
 
         private void jk_SelectedIndexChanged(object sender, EventArgs e)
         {
-            jk.Enabled = true;
-            btnSave.Enabled = true;
-            btnClear.Enabled = true;
+            
         }
 
         private void nt_TextChanged(object sender, EventArgs e)
         {
-            nt.Enabled = true;
-            btnSave.Enabled = true;
-            btnClear.Enabled = true;
+           
         }
 
         private void am_TextChanged(object sender, EventArgs e)
         {
-            am.Enabled = true;
-            btnSave.Enabled = true;
-            btnClear.Enabled = true;
+            
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -143,6 +133,11 @@ namespace FinalProjectKel7
 
         private void add_Click(object sender, EventArgs e)
         {
+            imhs.Enabled = true;
+            nmhs.Enabled = true;
+            jk.Enabled = true;
+            nt.Enabled = true;
+            am.Enabled = true;
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }

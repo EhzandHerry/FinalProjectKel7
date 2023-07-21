@@ -94,7 +94,7 @@
             // id
             // 
             this.id.Location = new System.Drawing.Point(246, 246);
-            this.id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.id.Margin = new System.Windows.Forms.Padding(2);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(189, 20);
             this.id.TabIndex = 4;
@@ -103,7 +103,7 @@
             // nt
             // 
             this.nt.Location = new System.Drawing.Point(246, 294);
-            this.nt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nt.Margin = new System.Windows.Forms.Padding(2);
             this.nt.Name = "nt";
             this.nt.Size = new System.Drawing.Size(189, 20);
             this.nt.TabIndex = 5;
@@ -112,7 +112,7 @@
             // ad
             // 
             this.ad.Location = new System.Drawing.Point(246, 318);
-            this.ad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ad.Margin = new System.Windows.Forms.Padding(2);
             this.ad.Name = "ad";
             this.ad.Size = new System.Drawing.Size(189, 20);
             this.ad.TabIndex = 6;
@@ -121,7 +121,7 @@
             // nd
             // 
             this.nd.Location = new System.Drawing.Point(246, 270);
-            this.nd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nd.Margin = new System.Windows.Forms.Padding(2);
             this.nd.Name = "nd";
             this.nd.Size = new System.Drawing.Size(189, 20);
             this.nd.TabIndex = 7;
@@ -130,7 +130,7 @@
             // btnsv
             // 
             this.btnsv.Location = new System.Drawing.Point(506, 241);
-            this.btnsv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsv.Margin = new System.Windows.Forms.Padding(2);
             this.btnsv.Name = "btnsv";
             this.btnsv.Size = new System.Drawing.Size(58, 23);
             this.btnsv.TabIndex = 8;
@@ -141,7 +141,7 @@
             // btnadd
             // 
             this.btnadd.Location = new System.Drawing.Point(506, 281);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(58, 23);
             this.btnadd.TabIndex = 9;
@@ -152,7 +152,7 @@
             // btnc
             // 
             this.btnc.Location = new System.Drawing.Point(506, 331);
-            this.btnc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnc.Margin = new System.Windows.Forms.Padding(2);
             this.btnc.Name = "btnc";
             this.btnc.Size = new System.Drawing.Size(58, 23);
             this.btnc.TabIndex = 10;
@@ -163,7 +163,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(662, 381);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(58, 23);
             this.button4.TabIndex = 11;
@@ -175,7 +175,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(153, 29);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -186,7 +186,7 @@
             // btnview
             // 
             this.btnview.Location = new System.Drawing.Point(645, 41);
-            this.btnview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnview.Margin = new System.Windows.Forms.Padding(2);
             this.btnview.Name = "btnview";
             this.btnview.Size = new System.Drawing.Size(58, 23);
             this.btnview.TabIndex = 13;
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(786, 429);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Delete);
@@ -236,7 +236,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);

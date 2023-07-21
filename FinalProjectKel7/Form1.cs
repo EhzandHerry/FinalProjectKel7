@@ -52,10 +52,40 @@ namespace FinalProjectKel7
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        
+
+        private void mengajarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            jadwal j1 = new jadwal();
-            j1.Show();
+            Mengajar m1 = new Mengajar();
+            m1.Show();
+            this.Hide();
+        }
+
+        private void pemilihanGedungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PilihGedung p1 = new PilihGedung();
+            p1.Show();
+            this.Hide();
+        }
+
+        private void pengambilanMatakuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PengambilanMatkul p2 = new PengambilanMatkul();
+            p2.Show();
+            this.Hide();
+        }
+
+        private void bimbinganToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bimbingan b1 = new Bimbingan();
+            b1.Show();
+            this.Hide();
+        }
+
+        private void pilihJurusanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PilihJurusan p3 = new PilihJurusan();
+            p3.Show();
             this.Hide();
         }
     }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bimbingan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bimbingan.Designer.cs">
+      <DependentUpon>Bimbingan.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBJadwalAkademikDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,12 +75,6 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="jadwal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jadwal.Designer.cs">
-      <DependentUpon>jadwal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +87,30 @@
     <Compile Include="matakuliah.Designer.cs">
       <DependentUpon>matakuliah.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mengajar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mengajar.Designer.cs">
+      <DependentUpon>Mengajar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PengambilanMatkul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PengambilanMatkul.Designer.cs">
+      <DependentUpon>PengambilanMatkul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PilihGedung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PilihGedung.Designer.cs">
+      <DependentUpon>PilihGedung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PilihJurusan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PilihJurusan.Designer.cs">
+      <DependentUpon>PilihJurusan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ruangan.cs">
@@ -95,6 +119,9 @@
     <Compile Include="ruangan.Designer.cs">
       <DependentUpon>ruangan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bimbingan.resx">
+      <DependentUpon>Bimbingan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,14 +131,23 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jadwal.resx">
-      <DependentUpon>jadwal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mahasiswa.resx">
       <DependentUpon>Mahasiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="matakuliah.resx">
       <DependentUpon>matakuliah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mengajar.resx">
+      <DependentUpon>Mengajar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PengambilanMatkul.resx">
+      <DependentUpon>PengambilanMatkul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PilihGedung.resx">
+      <DependentUpon>PilihGedung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PilihJurusan.resx">
+      <DependentUpon>PilihJurusan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.bimbinganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mengajarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pilihJurusanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pengambilanMatakuliahToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pemilihanGedungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -105,16 +113,65 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // toolStrip1
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.Location = new System.Drawing.Point(335, 172);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(116, 52);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "JADWAL MAHASISWA";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 11;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bimbinganToolStripMenuItem,
+            this.mengajarToolStripMenuItem,
+            this.pilihJurusanToolStripMenuItem,
+            this.pengambilanMatakuliahToolStripMenuItem,
+            this.pemilihanGedungToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(56, 22);
+            this.toolStripDropDownButton1.Text = "RELASI";
+            // 
+            // bimbinganToolStripMenuItem
+            // 
+            this.bimbinganToolStripMenuItem.Name = "bimbinganToolStripMenuItem";
+            this.bimbinganToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.bimbinganToolStripMenuItem.Text = "Bimbingan";
+            this.bimbinganToolStripMenuItem.Click += new System.EventHandler(this.bimbinganToolStripMenuItem_Click);
+            // 
+            // mengajarToolStripMenuItem
+            // 
+            this.mengajarToolStripMenuItem.Name = "mengajarToolStripMenuItem";
+            this.mengajarToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.mengajarToolStripMenuItem.Text = "Mengajar";
+            this.mengajarToolStripMenuItem.Click += new System.EventHandler(this.mengajarToolStripMenuItem_Click);
+            // 
+            // pilihJurusanToolStripMenuItem
+            // 
+            this.pilihJurusanToolStripMenuItem.Name = "pilihJurusanToolStripMenuItem";
+            this.pilihJurusanToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.pilihJurusanToolStripMenuItem.Text = "Pilih Jurusan";
+            this.pilihJurusanToolStripMenuItem.Click += new System.EventHandler(this.pilihJurusanToolStripMenuItem_Click);
+            // 
+            // pengambilanMatakuliahToolStripMenuItem
+            // 
+            this.pengambilanMatakuliahToolStripMenuItem.Name = "pengambilanMatakuliahToolStripMenuItem";
+            this.pengambilanMatakuliahToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.pengambilanMatakuliahToolStripMenuItem.Text = "Pengambilan Matakuliah";
+            this.pengambilanMatakuliahToolStripMenuItem.Click += new System.EventHandler(this.pengambilanMatakuliahToolStripMenuItem_Click);
+            // 
+            // pemilihanGedungToolStripMenuItem
+            // 
+            this.pemilihanGedungToolStripMenuItem.Name = "pemilihanGedungToolStripMenuItem";
+            this.pemilihanGedungToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.pemilihanGedungToolStripMenuItem.Text = "Pemilihan Gedung";
+            this.pemilihanGedungToolStripMenuItem.Click += new System.EventHandler(this.pemilihanGedungToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -122,7 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -131,6 +188,8 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +203,13 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem bimbinganToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mengajarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pilihJurusanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pengambilanMatakuliahToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pemilihanGedungToolStripMenuItem;
     }
 }
 
